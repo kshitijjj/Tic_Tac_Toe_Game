@@ -33,8 +33,8 @@ function Home(){
             [2,4,6],
         ];
 
-        for(let i of winnerArray){
-            const [a,b,c]=i;
+        for(let i=0;i<winnerArray.length;i++){
+            const [a,b,c]=winnerArray[i];
             if(value[a]!==null && value[a]===value[b] && value[a]===value[c]){
                 return value[a];
             };
