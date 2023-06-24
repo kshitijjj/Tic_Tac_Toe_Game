@@ -21,6 +21,28 @@ function Home(){
     const[input,setInput]=useState(true);
     const[ans,setans]=useState('');
 
+    function winner(){
+        const winnerArray=[
+            [0,1,2],
+            [3,4,5],
+            [6,7,8],
+            [0,3,6],
+            [1,4,7],
+            [2,5,8],
+            [0,4,8],
+            [2,4,6],
+        ];
+
+        for(let i of winnerArray){
+            const [a,b,c]=i;
+            if(value[a]!==null && value[a]===value[b] && value[a]===value[c]){
+                return value[a];
+            };
+        };
+        return false;
+    };
+
+
     function handleClick(e){
         const copy_Value=[...value];
         if(input==true){
@@ -45,29 +67,9 @@ function Home(){
         })
     };
 
-    function winner(){
-        const winner_array=[
-            [0,1,2],
-            [3,4,5],
-            [6,7,8],
-            [0,3,6],
-            [1,4,7],
-            [2,5,8],
-            [0,4,8],
-            [2,4,6]
-        ]
+    const str="Yeaahhh !!! "+winner()+" won the game ";
 
-        for(let i=0;i<winner_array.length;i++){
-            const [a,b,c]=winner_array[i];
-            if(value[a] && value[a]===value[b] && value[a]===value[c]){
-                return true;
-            }
-        }
-        return false;
-    };
-
-    const iswinner=winner()
-
+  
 
     return (
         <div className="home_main">
@@ -75,8 +77,14 @@ function Home(){
                 <h1 id='home_title'>Tic-Tac-Toe Game</h1>
             </div>
         <div className="game_box">
+            {winner() ?(<><p id='win'>{str}</p>
+            <p id='refresh'>Refresh to start a new game</p>
+             </>):
+            (
+            <>
             <div className="game_sub_boxes">
-                <Box style={mystyle}  id='inbox' onClick={()=>handleClick(1)}text={value[1]}/>
+                <Box style={mystyle}  id='inbox' onClick={()=>handleClick(0)}text={value[0]}/>
+                <Box style={mystyle} id='inbox' onClick={()=>handleClick(1)} text={value[1]}/>
                 <Box style={mystyle} id='inbox' onClick={()=>handleClick(2)} text={value[2]}/>
                 <Box style={mystyle} id='inbox' onClick={()=>handleClick(3)} text={value[3]}/>
                 <Box style={mystyle} id='inbox' onClick={()=>handleClick(4)} text={value[4]}/>
@@ -84,9 +92,10 @@ function Home(){
                 <Box style={mystyle} id='inbox' onClick={()=>handleClick(6)} text={value[6]}/>
                 <Box style={mystyle} id='inbox' onClick={()=>handleClick(7)} text={value[7]}/>
                 <Box style={mystyle} id='inbox' onClick={()=>handleClick(8)} text={value[8]}/>
-                <Box style={mystyle} id='inbox' onClick={()=>handleClick(9)} text={value[9]}/>
             </div>
+         </>)}
         </div>
+        
         </div>
     );
 }

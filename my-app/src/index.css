@@ -22,11 +22,14 @@ code {
 
 .game_box{
   display: grid;
-  width: 40vw;
-  height: 60vh;
+  width: 40%;
+  height: 50%;
   margin-top: 5%;
   margin-left: 30%;
   box-shadow: 0px 2px 24px -8px grey;
+}
+.parent_box{
+  padding: 0.3em;
 }
 
 .game_sub_boxes{
@@ -54,3 +57,37 @@ code {
   font-weight: bolder;
 }
 
+#win{
+  font-size: 1.7em;
+  font-family: 'Patua One', cursive;
+  text-shadow: 1.5px 1.5px 1.5px grey;
+  text-align: center;
+  height: 0.3vh;
+}
+#refresh{
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 0.2em;
+  opacity: 90%;
+  font-weight: 400;
+  margin-bottom: 5%;
+}
+
+@media (min-width:320px) and (max-width:420px){
+  .game_box{
+    margin-left: 8%;
+    width: 55%;
+    margin-bottom: 10%;
+  }
+  .parent_box{
+    padding: 0.2em;
+  }
+}
+
+@media (min-width:421px) and (max-width:768px){
+
+}
+
+@media  (min-width:769px) and (max-width:1200px){
+  
+}
