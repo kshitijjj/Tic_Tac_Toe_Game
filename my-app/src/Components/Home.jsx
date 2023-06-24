@@ -67,7 +67,7 @@ function Home(){
         })
     };
 
-    const str="Yeaahhh !!! "+winner()+" won the game ";
+    const str="Yayyyy!! "+winner()+" won the game ";
 
   
 
