@@ -38,14 +38,7 @@ code {
   padding: 1em;
 }
 
-/* .box_comp{
-  display: grid;
-  justify-content: center;
-  height: 10vh;
-  margin: 0.2em;
-  padding:0.5em;
-  box-shadow: 0px 2px 16px -8px grey;
-} */
+
 
 .box_comp:hover{
   box-shadow: none;
@@ -75,19 +68,93 @@ code {
 
 @media (min-width:320px) and (max-width:420px){
   .game_box{
-    margin-left: 8%;
-    width: 55%;
-    margin-bottom: 10%;
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 20%;
   }
   .parent_box{
     padding: 0.2em;
   }
+  #home_title{
+    font-size: 1.9em;
+  }
+  #win{
+    font-size: 1.5em;
+  }
+  #refresh{
+    font-size: 1em;
+    padding: 0.3em;
+  }
 }
 
 @media (min-width:421px) and (max-width:768px){
-
+  .game_box{
+    margin-left: 8%;
+    width: 85%;
+    margin-top: 20%;
+  }
+  #home_title{
+    font-size: 3.8em;
+  }
+  #win{
+    font-size: 3em;
+  }
+  #refresh{
+    font-size: 2.1em;
+    padding: 0.3em;
+  }
 }
 
-@media  (min-width:769px) and (max-width:1200px){
-  
+@media  (min-width:769px) and (max-width:900px){
+  .game_box{
+    margin-left: 8%;
+    width: 85%;
+    margin-top: 20%;
+  }
+  #home_title{
+    font-size: 3.8em;
+  }
+  #win{
+    font-size: 3em;
+  }
+  #refresh{
+    font-size: 2.1em;
+    padding: 0.3em;
+  }
+}
+
+@media (min-width:901px) and (max-width:1200px){
+  .game_box{
+    margin-left: 8%;
+    width: 85%;
+    margin-top: 20%;
+  }
+  #home_title{
+    font-size: 4.8em;
+  }
+  #win{
+    font-size: 3.6em;
+  }
+  #refresh{
+    font-size: 2.5em;
+    padding: 0.3em;
+  }
+}
+
+@media (min-width:1201px){
+  .game_box{
+    margin-left: 8%;
+    width: 85%;
+    margin-top: 12%;
+  }
+  #home_title{
+    font-size: 6em;
+  }
+  #win{
+    font-size: 4.6em;
+  }
+  #refresh{
+    font-size: 3.1em;
+    padding: 0.3em;
+  }
 }
